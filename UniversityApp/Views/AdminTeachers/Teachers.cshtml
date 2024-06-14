@@ -1,0 +1,23 @@
+﻿@model List<UniversityApp.DTOs.TeacherDTOs.GetAllTeachersDto>?
+@{
+    ViewData["Title"] = "Teachers";
+}
+
+<h3>teachers list</h3>
+@if (Model != null)
+{
+    <ul>
+        @foreach (var i in Model)
+        {
+        <li>
+            <p>@i.FirstName</p>
+            <p>@i.LastName</p>
+            <p>@i.Age</p>
+        </li>
+        }
+    </ul>
+}
+else
+{
+    <p>No Teachers registered.</p>
+}
